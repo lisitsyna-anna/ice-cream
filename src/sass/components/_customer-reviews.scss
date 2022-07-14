@@ -1,0 +1,130 @@
+.customer-reviesw {
+  padding-top: 60px;
+}
+
+.customer-reviesw__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.customer-reviesw__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-reviesw__img {
+  margin: 0 auto;
+}
+
+.customer-reviesw__text {
+  position: relative;
+  margin-top: 32px;
+  background-color: #fafafa;
+  @include font(12px, 500, 2.5833, 0);
+  text-align: center;
+  padding-top: 43px;
+  padding-right: 58px;
+  padding-bottom: 26px;
+  padding-left: 65px;
+
+  flex-grow: 1;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+
+    #e1e1e1,
+    #e1e1e1 1px,
+    #fafafa 1px,
+    #fafafa 31px
+  );
+  background-repeat: no-repeat;
+  background-position: 50px 74px;
+
+  background-size: 60px 100%;
+}
+
+.customer-reviesw__text:before {
+  position: absolute;
+  content: '';
+
+  background-image: url(/src/images/quotation_marks.svg);
+
+  width: 54px;
+  height: 40px;
+
+  left: 53px;
+  top: 30px;
+  opacity: 0.4;
+}
+
+.customer-reviesw__text span {
+  z-index: 1;
+}
+
+.customer-reviesw__dots {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  background-color: #c7133e;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.customer-reviesw__dots::after {
+  position: absolute;
+  content: '';
+  background-color: #c7133e;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  left: 14px;
+}
+
+.customer-reviesw__dots::before {
+  position: absolute;
+  content: '';
+  background-color: #c7133e;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  right: 14px;
+}
+
+.customer-reviesw__name {
+  @include font(14px, 500, 1.8571, 0);
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.slick-dots li button {
+  padding: 4;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  line-height: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slick-dots li button:hover:before {
+  color: var(--pimary-accent-color);
+}
+
+.slick-dots li.slick-active button {
+  position: relative;
+}
+.slick-dots li.slick-active button:before {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-image: url(/src/images/home_icon.svg);
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
