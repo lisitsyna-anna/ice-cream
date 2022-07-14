@@ -47,7 +47,7 @@
     }
     
     &__text {
-        font-family: 'DM Sans';
+        font-family: var(--main-font);
         font-weight: 700;
         font-size: 12px;
         line-height: 1.86;
@@ -66,18 +66,16 @@
     }
     
     &__bottom-title {
-        font-family: 'DM Sans';
+        font-family: var(--main-font);
         font-weight: 700;
-        font-size: 14px;
         line-height: 1.52;
         text-align: center;
         color: var(--secondary-text-color);
     }
     
     &__bottom-subtitle {
-        font-family: 'DM Sans';
+        font-family: var(--main-font);
         font-weight: 700;
-        font-size: 14px;
         line-height: 1.52;
         text-align: center;
         color: var(--secondary-text-color);
