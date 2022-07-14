@@ -1,5 +1,5 @@
 .section-title__products {
-  font-family: 'Titan One';
+  font-family: var(--accent-font);
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -11,7 +11,7 @@
   color: var(--tertiary-text-color);
 }
 .products__text {
-  font-family: 'DM Sans';
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -31,34 +31,42 @@
   margin-left: auto;
   margin-right: auto;
 }
-.products__content {
-  padding-top: 140px;
-  padding-bottom: 140px;
-}
-.products__list .section-title__products {
+
+.products-list .section-title__products {
   margin-bottom: 70px;
 }
-.products__list .products__text {
+.products-list .products__text {
   margin-bottom: 32px;
 }
-.products__description {
+.products__label {
   margin-bottom: 15px;
 }
-.products__content--rose {
+.products-list__content {
   width: 280px;
   height: 489px;
   border-radius: 24px;
+}
+.products-list__content--rose {
   background-color: #ffb8ca;
 }
-.products__content--brown {
-  width: 280px;
-  height: 489px;
-  border-radius: 24px;
+.products-list__content--brown {
   background-color: #f0d1a5;
 }
-.products__content--green {
-  width: 280px;
-  height: 489px;
-  border-radius: 24px;
+.products-list__content--green {
   background: #c2e297;
+}
+.products-list__content--rose {
+  position: relative;
+}
+.products-list__item::before {
+  content: ' ';
+  position: absolute;
+  display: block;
+  width: 280px;
+  height: 280px;
+  top: -10%;
+  left: 10%;
+  background-image: url(/src/images/product-icecream-mobile-1x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
