@@ -1,0 +1,111 @@
+.header {
+  background-color: var(--hero-bg-color);
+  padding-top: 8px;
+  display: flex;
+  outline: transparent;
+  &__btn {
+    display: none;
+  }
+}
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-list {
+  display: none;
+}
+
+.menu-open-btn {
+  background-color: var(--hero-bg-color);
+  border: transparent;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  color: var(--pimary-accent-color);
+}
+.menu-open-icon {
+  fill: currentColor;
+}
+.menu-open-icon:hover,
+.menu-open-icon:focus {
+  fill: var(--tertiary-text-color);
+}
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mobile-menu-bg-color);
+  z-index: 1;
+  &__container {
+    width: 100%;
+    padding-top: 60px;
+    position: relative;
+    height: 100%;
+  }
+  &__btn {
+    margin-bottom: 19px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 13px 49px;
+    color: var(--pimary-accent-color);
+  }
+  &__btn:hover,
+  &__btn:focus {
+    background-color: var(--pimary-accent-color);
+    color: var(--tertiary-text-color);
+  }
+}
+.icon-btn-arrow {
+  margin-left: 16px;
+  fill: currentColor;
+}
+.icon-btn-arrow:hover,
+.icon-btn-arrow:focus {
+  fill: var(--tertiary-text-color);
+}
+
+.mob-menu-list {
+  &__item {
+    border-bottom: 1px solid #e18298;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  &__item:first-child {
+    border-top: 1px solid #e18298;
+  }
+  &__link {
+    color: var(--tertiary-text-color);
+    @include font(14px, 700, 1.29, null);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--pimary-accent-color);
+  }
+}
+.menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu-close {
+  fill: rgba(255, 255, 255, 1);
+}
+.menu-close:hover,
+.menu-close:focus {
+  fill: var(--pimary-accent-color);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
