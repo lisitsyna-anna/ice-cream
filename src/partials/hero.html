@@ -1,1 +1,109 @@
-
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__title hero__title--white title">
+      Ice cream made with<span class="hero__title hero__title--red title">
+        Passion</span
+      >
+    </h1>
+    <picture>
+      <source
+        srcset="
+          ./images/hero-icecream-desktop-1x.png 1x,
+          ./images/hero-icecream-desktop-1x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          ./images/hero-icecream-tablet-1x.png 1x,
+          ./images/hero-icecream-tablet-1x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/hero-icecream-mobile-1x.png 1x,
+          ./images/hero-icecream-mobile-2x.png 2x
+        "
+        media="(min-width: 320px)"
+      />
+      <img
+        class="hero__img"
+        src="./images/hero-icecream-mobile-1x.png"
+        alt="Ice cream"
+        width="199"
+      />
+    </picture>
+    <ul class="hero-list list">
+      <li class="hero-list__item">
+        <span class="hero-list__wrap">16</span>
+        cafes
+      </li>
+      <li class="hero-list__item">
+        <span class="hero-list__wrap">23</span>
+        food trucks
+      </li>
+    </ul>
+    <ul class="hero-info list">
+      <li class="hero-info__item">
+        <a class="hero-info__link link" href="#products">Products</a>
+      </li>
+      <li class="hero-info__item">
+        <a class="hero-info__link link" href="#about">How it’s made?</a>
+      </li>
+    </ul>
+    <picture>
+      <source
+        srcset="
+          ./images/hero-milk-desktop-1x.png 1x,
+          ./images/hero-milk-desktop-2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          ./images/hero-milk-tablet-1x.png 1x,
+          ./images/hero-milk-tablet-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <img
+        class="hero__img"
+        src="./images/hero-milk-tablet-1x.png"
+        alt="Big eco jug of milk"
+        width="152"
+      />
+    </picture>
+    <p class="hero__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et
+    </p>
+    <button class="hero__btn--circle">
+      <svg class="hero__icon" width="8" height="12">
+        <use href="./images/icons.svg#icon-btn-arrow"></use>
+      </svg>
+    </button>
+    <picture>
+      <source
+        srcset="
+          ./images/hero-girl-desktop-1x.png 1x,
+          ./images/hero-girl-desktop-2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          ./images/hero-girl-tablet-1x.png 1x,
+          ./images/hero-girl-tablet-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <img
+        class="hero__img"
+        src="./images/hero-girl-tablet-1x.png"
+        alt="Girl eat ice cream"
+        width="190"
+      />
+    </picture>
+  </div>
+</section>
