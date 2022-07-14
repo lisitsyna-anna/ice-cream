@@ -8,6 +8,10 @@
     width: 320px;
   }
 
+  @include mobile-responsive {
+    max-width: 768px;
+  }
+
   @include tablet {
     width: 768px;
     padding-left: 16px;
