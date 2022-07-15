@@ -43,10 +43,11 @@
   height: 24px;
   border: none;
   border-radius: 20px;
-}
-.hero-info__item + .hero-info__item {
+  & + & {
   margin-left: 8px;
 }
+}
+
 
 .hero-info__item--red {
   min-width: 62.4px;
