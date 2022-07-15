@@ -1,3 +1,101 @@
-.hero{
-    background-color: var(--hero-bg-color);
+.hero {
+  width: 100vw;
+  height: 422px;
+  background-color: var(--hero-bg-color);
+  & .container {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+  }
+}
+
+.hero__circle {
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at center, #ffa5ba 0%, #ffa5ba 100%);
+  margin-left: 16px;
+}
+
+.hero__wrap--absolute {
+  position: absolute;
+  top: 136px;
+  left: 20px;
+  z-index: 1;
+}
+.hero__title {
+  max-width: 218px;
+  text-align: left;
+  margin-bottom: 20px;
+  &--white {
+    font-size: 26px;
+    color: var(--tertiary-text-color);
+  }
+  &--red {
+    font-size: 48px;
+    line-height: 0.96;
+  }
+}
+.hero-info {
+  display: flex;
+}
+.hero-info__item {
+  height: 24px;
+  border: none;
+  border-radius: 20px;
+  & + & {
+  margin-left: 8px;
+}
+}
+
+
+.hero-info__item--red {
+  min-width: 62.4px;
+  color: var(--tertiary-text-color);
+  background-color: var(--pimary-accent-color);
+  &:hover,
+  &:focus {
+    color: var(--pimary-accent-color);
+    background-color: var(--tertiary-text-color);
+  }
+}
+
+.hero-info__item--white {
+  min-width: 82.8px;
+  color: var(--pimary-accent-color);
+  background-color: var(--primary-bg-color);
+  &:hover,
+  &:focus {
+    color: var(--primary-bg-color);
+    background-color: var(--pimary-accent-color);
+  }
+}
+
+.hero-info__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: inherit;
+  @include font(8px, 400, 1.25, null);
+  color: inherit;
+}
+.hero__img {
+  position: absolute;
+  display: none;
+
+  &--icecream {
+    display: block;
+    top: 12px;
+    left: 97px;
+  }
+}
+.hero-list {
+    display: none;
+}
+.hero__text {
+  display: none;
+}
+.hero__btn {
+  display: none;
 }
