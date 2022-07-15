@@ -2,6 +2,10 @@
     background-color: var(--secondary-bg-color);
     &__top {
         padding: 40px 0;
+        @include desktop {
+            padding-top: 121px;
+            padding-bottom: 60px;
+        }
     }
     &__top-container {
         @include tablet {
@@ -19,6 +23,10 @@
             margin-bottom: 12px;
             width: 340px;
         }
+        @include desktop {
+            width: 472px;
+            margin-bottom: 16px;
+        }
     }
     
     &__title {
@@ -27,6 +35,11 @@
         width: 200px;
         @include tablet {
             width: 340px;
+            margin-bottom: 0;
+        }
+        @include desktop {
+            width: 478px;
+            margin-bottom: 0;
         }
     }
     
@@ -71,6 +84,10 @@
         @include tablet {
             font-size: 14px;
         }
+        @include desktop {
+            font-size: 16px;
+            letter-spacing: 0.02em;
+        }
     }
     
     &__phone {
@@ -84,6 +101,10 @@
         @include tablet {
             padding-top: 8px;
             padding-bottom: 8px;
+        }
+        @include desktop {
+            padding-top: 7px;
+            padding-bottom: 4px;
         }
 
     }
