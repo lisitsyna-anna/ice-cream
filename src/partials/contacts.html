@@ -1,4 +1,4 @@
-<section class="contacts">
+<section class="contacts" #contacts>
     <div class="container">
         <h2 class="visually-hidden">Contacts and franchise</h2>
 
@@ -7,27 +7,27 @@
             <!-- Это сам блок -->
             <li class="contacts__item">
 
-                <p class="contacts__category-text">CAFE</p>
-                <p class="contacts__category-text">Chicago</p>
-                <p>Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                <p class="contacts__category">CAFE</p>
+                <p class="contacts__text">Chicago</p>
+                <p class="contacts__second-text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
-                <ul class="contacts__time list">
+                <ul class="contacts__time-list list">
                     <li class="contacts__time-item">
-                        <p>Monday - Friday</p>
-                        <p>06:00 AM - 10:00 PM</p>
+                        <p class="contacts__text">Monday - Friday</p>
+                        <p class="contacts__time-text">06:00 AM - 10:00 PM</p>
                     </li>
                     <li class="contacts__time-item">
-                        <p>Saturday - Sunday</p>
-                        <p>08:00 AM - 16:00 PM</p>
+                        <p class="contacts__text">Saturday - Sunday</p>
+                        <p class="contacts__time-text contacts__time-text--border">08:00 AM - 16:00 PM</p>
                     </li>
                 </ul>
                 <!-- Список для контактов -->
-                <ul class="contacts__communications list">
+                <ul class="contacts__communications-list list">
                     <li>
-                        <a class="contacts__communications-tell link" href="tel:+61(0)383766284 ">+61(0) 383 766 284</a>
+                        <a class="contacts__communications-link link" href="tel:+61(0)383766284 ">+61(0) 383 766 284</a>
                     </li>
                     <li>
-                        <a class="contacts__communications-mail link"
+                        <a class="contacts__communications-link link"
                             href="mailto:noreply@envato.com">noreply@envato.com</a>
                     </li>
                 </ul>
@@ -36,27 +36,27 @@
 
             <li class="contacts__item">
 
-                <p class="contacts__category-text">FOODTRUCK</p>
-                <p>Chicago</p>
-                <p>Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                <p class="contacts__category contacts__category--green">FOODTRUCK</p>
+                <p class="contacts__text">Los Angeleso</p>
+                <p class="contacts__second-text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
-                <ul class="contacts__time list">
+                <ul class="contacts__time-list list">
                     <li class="contacts__time-item">
-                        <p>Monday - Friday</p>
-                        <p>06:00 AM - 10:00 PM</p>
+                        <p class="contacts__text">Monday - Friday</p>
+                        <p class="contacts__time-text">06:00 AM - 10:00 PM</p>
                     </li>
                     <li class="contacts__time-item">
-                        <p>Saturday - Sunday</p>
-                        <p>08:00 AM - 16:00 PM</p>
+                        <p class="contacts__text">Saturday - Sunday</p>
+                        <p class="contacts__time-text contacts__time-text--border">08:00 AM - 16:00 PM</p>
                     </li>
                 </ul>
                 <!-- Список для контактов -->
-                <ul class="contacts__communications list">
+                <ul class="contacts__communications-list list">
                     <li>
-                        <a class="contacts__communications-tell link" href="tel:+61(0)383766284 ">+61(0) 383 766 284</a>
+                        <a class="contacts__communications-link link" href="tel:+61(0)383766284 ">+61(0) 383 766 284</a>
                     </li>
                     <li>
-                        <a class="contacts__communications-mail link"
+                        <a class="contacts__communications-link link"
                             href="mailto:noreply@envato.com">noreply@envato.com</a>
                     </li>
                 </ul>
@@ -65,27 +65,27 @@
 
             <li class="contacts__item">
 
-                <p class="contacts__category-text">CAFE</p>
-                <p>Chicago</p>
-                <p>Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                <p class="contacts__category">CAFE</p>
+                <p class="contacts__text">New York</p>
+                <p class="contacts__second-text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
-                <ul class="contacts__time list">
+                <ul class="contacts__time-list list">
                     <li class="contacts__time-item">
-                        <p>Monday - Friday</p>
-                        <p>06:00 AM - 10:00 PM</p>
+                        <p class="contacts__text">Monday - Friday</p>
+                        <p class="contacts__time-text">06:00 AM - 10:00 PM</p>
                     </li>
                     <li class="contacts__time-item">
-                        <p>Saturday - Sunday</p>
-                        <p>08:00 AM - 16:00 PM</p>
+                        <p class="contacts__text">Saturday - Sunday</p>
+                        <p class="contacts__time-text contacts__time-text--border">08:00 AM - 16:00 PM</p>
                     </li>
                 </ul>
                 <!-- Список для контактов -->
-                <ul class="contacts__communications list">
+                <ul class="contacts__communications-list list">
                     <li>
-                        <a class="contacts__communications-tell link" href="tel:+61(0)383766284 ">+61(0) 383 766 284</a>
+                        <a class="contacts__communications-link link" href="tel:+61(0)383766284 ">+61(0) 383 766 284</a>
                     </li>
                     <li>
-                        <a class="contacts__communications-mail link"
+                        <a class="contacts__communications-link link"
                             href="mailto:noreply@envato.com">noreply@envato.com</a>
                     </li>
                 </ul>
@@ -94,17 +94,17 @@
 
 
         <ul class="contacts__btn-list list">
-            <li class="contacts__btn-item list">
-                <button class="contacts__button-first" type="button">Our Locations
-                    <svg class="contacts__btn-icon" width="4.43" height="8">
+            <li class="contacts__btn-item">
+                <button class="contacts__button contacts__button--red" type="button">Our Locations
+                    <svg class="contacts__btn-icon" width="7" height="10">
                         <use href="./images/icons.svg#icon-btn-arrow">
                         </use>
                     </svg>
                 </button>
             </li>
-            <li class="contacts__btn-item list">
-                <button class="contacts__button-second" type="button">Franchise
-                    <svg class="contacts__btn-icon" width="4.43" height="8">
+            <li class="contacts__btn-item">
+                <button class="contacts__button contacts__button--white" type="button">Franchise
+                    <svg class="contacts__btn-icon contacts__btn-icon--red" width="7" height="10">
                         <use href="./images/icons.svg#icon-btn-arrow">
                         </use>
                     </svg>
