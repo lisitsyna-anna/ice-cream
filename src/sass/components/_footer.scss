@@ -3,17 +3,31 @@
     &__top {
         padding: 40px 0;
     }
+    &__top-container {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
     
     &__label {
         text-align: left;
         margin-bottom: 16px;
         width: 232px;
+        @include tablet {
+            margin-bottom: 12px;
+            width: 340px;
+        }
     }
     
     &__title {
         text-align: left;
         margin-bottom: 40px;
         width: 200px;
+        @include tablet {
+            width: 340px;
+        }
     }
     
     &__list {
@@ -54,6 +68,9 @@
         font-size: 12px;
         line-height: 1.86;
         text-align: right;
+        @include tablet {
+            font-size: 14px;
+        }
     }
     
     &__phone {
@@ -64,7 +81,19 @@
         border-top: 1px solid #E1E1E1;
         padding-top: 16px;
         padding-bottom: 3px;
+        @include tablet {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
 
+    }
+    &__bottom-container {
+        @include tablet {
+           display: flex;
+           justify-content: center; 
+           gap: 5px;
+        }
+        
     }
     
     &__bottom-title {
@@ -73,6 +102,11 @@
         line-height: 1.52;
         text-align: center;
         color: var(--secondary-text-color);
+
+        @include tablet {
+            line-height: 1.86;
+            letter-spacing: 0.02em;
+        }
     }
     
     &__bottom-subtitle {
@@ -81,5 +115,10 @@
         line-height: 1.52;
         text-align: center;
         color: var(--secondary-text-color);
+
+        @include tablet {
+            line-height: 1.86;
+            letter-spacing: 0.02em;
+        }
     }
 }
