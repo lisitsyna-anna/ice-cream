@@ -97,7 +97,7 @@
   &:before {
     font-size: 14px;
     line-height: 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--typical-time-function);
   }
 
   &:hover:before {
