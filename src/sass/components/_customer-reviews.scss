@@ -1,11 +1,20 @@
 .customer-reviesw {
   padding-top: 60px;
+
+  @include desktop {
+    padding-top: 120px;
+  }
 }
 
 .customer-reviesw .container {
   @include tablet {
     padding-left: 74px;
     padding-right: 74px;
+  }
+
+  @include desktop {
+    padding-left: 116px;
+    padding-right: 116px;
   }
 }
 
@@ -67,6 +76,25 @@
     background-size: calc(100% - 12px) calc(100% - 104px);
   }
 
+  @include desktop {
+    margin-top: 16px;
+    @include font(16px, 500, 1.86, 0.04em);
+    padding-top: 47px;
+    padding-right: 109px;
+    padding-bottom: 39px;
+    padding-left: 109px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #e1e1e1,
+      #e1e1e1 1px,
+      #fafafa 1px,
+      #fafafa 31px
+    );
+    background-repeat: no-repeat;
+    background-position: 73px 76px;
+    background-size: calc(100% - 147px) calc(100% - 107px);
+  }
+
   &:before {
     position: absolute;
     content: '';
@@ -76,13 +104,17 @@
     left: 53px;
     top: 30px;
     z-index: -1;
-
     @include tablet {
       width: 60px;
       left: 6px;
       top: 20px;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+    @include desktop {
+      width: 54px;
+      left: 72px;
+      top: 32px;
     }
   }
 }
@@ -100,6 +132,10 @@
 
   @include tablet {
     margin-top: 4px;
+  }
+
+  @include desktop {
+    margin-top: 16px;
   }
 
   &::after {
@@ -131,6 +167,9 @@
   @include tablet {
     @include font(16px, 500, 1.86, 0);
     margin-bottom: 18px;
+  }
+  @include desktop {
+    @include font(20px, 500, 1.86, 0);
   }
 }
 
