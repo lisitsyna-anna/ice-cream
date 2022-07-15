@@ -3,6 +3,11 @@
   padding-top: 8px;
   display: flex;
   outline: transparent;
+
+  &__logo {
+    display: flex;
+    margin-right: 100px;
+  }
   &__btn {
     display: none;
     padding: 13px 49px;
@@ -19,13 +24,44 @@
     color: var(--tertiary-text-color);
   }
 }
-.header__container {
+nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 0;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mobile-responsive {
+  }
 }
 .header-list {
   display: none;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop {
+    display: flex;
+  }
+  &__item {
+    margin-right: 35px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__link {
+    color: var(--tertiary-text-color);
+    @include font(16px, 700, 1.31, null);
+  }
+  &__link.current {
+    color: var(--pimary-accent-color);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--pimary-accent-color);
+  }
 }
 
 .menu-open-btn {
@@ -37,6 +73,9 @@
   align-items: center;
   margin-left: auto;
   color: var(--pimary-accent-color);
+  @include desktop {
+    display: none;
+  }
 }
 .menu-open-icon {
   fill: currentColor;
@@ -52,7 +91,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--mobile-menu-bg-color);
-  z-index: 1;
+  z-index: 999;
   @include tablet {
     width: 40%;
     left: 60%;
@@ -98,6 +137,9 @@
   &__link {
     color: var(--tertiary-text-color);
     @include font(14px, 700, 1.29, null);
+  }
+  &__link.current {
+    color: var(--pimary-accent-color);
   }
   &__link:hover,
   &__link:focus {
