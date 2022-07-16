@@ -14,25 +14,33 @@
     pointer-events: none;
 }  
 }
+.no-scroll {
+    overflow: hidden;
+}
 .loc-modal {
     position: absolute;
+    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 98vw;
+    width: 90vw;
     height: 98vh;
 
-    @include mobile-responsive {
-       width: 300px;
-       height: 609px; 
+    @include mobile {
+       width: 440px;
+       height: 800px; 
     }
     
     
     @include tablet {
-        width: 528px;
-        height: 581px;
+        width: 700px;
+        height: 720px;
     }
     
+    @include desktop {
+        width: 900px;
+        height: 770px;
+    }
     background-color: var(--secondary-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -54,52 +62,53 @@
     right: 14px;
     width: 30px;
     height: 30px;
-    border: 1px solid #d41443;
+    background-color: var(--mobile-menu-bg-color);
+    color: var(--primary-bg-color);
+    border: 1px solid #0000001a;
     border-radius: 50%;
-    background-color: transparent;
-    transition-property: fill;
+    transition-property: border, background-color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-        background-color: var(--pimary-accent-color);
+        background-color: var(--primary-bg-color);
+        border: 1px solid transparent;
+        fill: var(--mobile-menu-bg-color);
     }
 
     &:hover .loc-modal__close-icon {
-        fill: var(--tertiary-text-color);
+        fill: var(--mobile-menu-bg-color);
     }
 }
 .loc-modal__close-icon {
-    fill: var(--pimary-accent-color);
+    fill: currentColor;
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .loc-modal__wrap {
     padding-top: 50px;
-    padding-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
 }
 .loc-modal__main-title {
-    @include font(16px, 700, 1.15, null);
+    @include font(30px, 700, 1.15, null);
     text-align: center;
     @include tablet {
-        @include font(25px, 700, 1.15, null);
+        @include font(40px, 700, 1.15, null);
         text-align: center;
     }
 }
 .loc-modal__list {
     text-align: center;
-}
-.loc-modal__list-wrap {
     @include tablet {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 }
 .loc-modal__title {
     color: var(--pimary-accent-color);
+    @include font(20px, 400, 1.16, null);
     margin-top: 20px;
     margin-bottom: 5px;
     @include tablet {
@@ -108,17 +117,51 @@
     }
 }
 .loc-modal__subtitle {
-    @include font(15px, 400, 1.16, null);
-    margin-bottom: 5px;
+    @include font(17px, 400, 1.16, null);
+    font-family: var(--main-font);
+    margin-bottom: 10px;
     @include tablet {
-        @include font(16px, 400, 1.16, null);
+        @include font(19px, 400, 1.16, null);
     }
 }
+.loc-modal__map-wrap {
+    border: 6px groove var(--secondary-accent-color);
+    display: inline-block;
+}
 .loc-modal__map {
-    width: 150px;
+    width: 200px;
     height: 100px;
-    @include tablet {
-        width: 150px;
-        height: 150px;
+    @include mobile {
+       width: 300px;
+       height: 100px; 
     }
+    
+    @include tablet {
+        width: 200px;
+        height: 430px;
+    }
+    @include desktop {
+        width: 250px;
+        height: 480px;
+    }
+}
+.loc-modal__descrip{
+    margin-top: 5px;
+    @include font(18px, 400, 1, null);
+    color: var(--secondary-text-color);
+    @include mobile {
+        margin-top: 10px;
+        @include font(20px, 400, 1, null);
+    }
+    @include tablet {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include desktop {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
