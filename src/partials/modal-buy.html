@@ -5,5 +5,44 @@
         <use href="./images/icons.svg#icon-cross"></use>
       </svg>
     </button>
+    <p class="modal-buy-title">Buy now</p>
+    <form>
+      <label for="user-name" class="modal-buy-label label">Name</label>
+      <input
+        type="text"
+        id="user-name"
+        name="user-name"
+        class="modal-buy-input"
+      />
+      <label for="user-tel" class="modal-buy-label label">Phone</label>
+      <input type="tel" id="user-tel" name="user-tel" class="modal-buy-input" />
+      <label for="user-email" class="modal-buy-label label">E-mail</label>
+      <input
+        type="email"
+        id="user-email"
+        name="user-email"
+        class="modal-buy-input"
+      />
+      <label for="Product" class="group-label label">Product</label>
+      <select name="product" id="product" class="select-modal">
+        <optgroup label="Ice Cream">
+          <option value="Chocolate">Chocolate</option>
+          <option value="Strawberry">Strawberry</option>
+          <option value="Banana">Banana</option>
+        </optgroup>
+
+        <optgroup label="Milkshakes">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </optgroup>
+        <optgroup label="Ice Coffee">
+          <option value="Ice Latte">Ice Latte</option>
+          <option value="Frappe">Frappe</option>
+          <option value="Bumblebee">Bumblebee</option>
+        </optgroup>
+      </select>
+      <button class="modal-btn">Send</button>
+    </form>
   </div>
 </div>
