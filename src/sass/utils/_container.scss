@@ -4,8 +4,12 @@
   padding-right: 20px;
   margin: 0 auto;
 
-  @include mobile-responsive {
-    max-width: 768px;
+  // @include mobile-responsive {
+  //   max-width: 480px;
+  // }
+
+  @include mobile {
+    width: 480px;
   }
 
   @include tablet {
