@@ -1,11 +1,40 @@
 .advantages {
     background-color: var(--secondary-bg-color);
     padding-top: 40px;
-    padding-bottom: 87px;
+}
+
+.advantages-list {
+    @include tablet {
+        display: flex;
+    }
 }
 
 .advantages-list__item:not(:last-child) {
     margin-bottom: 32px;
+    @include tablet {
+        margin-right: 18px;
+    }
+}
+
+.advantages-list__item--first {
+    width: 190px;
+    @include tablet {
+        width: 180px;
+    }
+}
+
+.advantages-list__item--second {
+    width: 190px;
+    @include tablet {
+        width: 180px;
+    }
+} 
+
+.advantages-list__item--third {
+    width: 190px;
+    @include tablet {
+        width: 180px;
+    }
 }
 
 .advantages-list__item--first::before {
@@ -16,6 +45,9 @@
     background-size: contain;
     width: 33px;
     height: 50px;
+    @include retina {
+        background-image: url(/src/images/advantages-icon1-2x.png);
+    }
 }
 
 .advantages-list__item--second::before {
@@ -26,6 +58,9 @@
     background-size: contain;
     width: 50px;
     height: 50px;
+    @include retina{
+        background-image: url(/src/images/advantages-icon2-2x.png);
+    }
 }
 
 .advantages-list__item--third::before {
@@ -36,6 +71,9 @@
     background-size: contain;
     width: 44px;
     height: 50px;
+    @include retina{
+        background-image: url(/src/images/advantages-icon3-2x.png);
+    }
 }
 
 .advantages-list__number {
@@ -45,10 +83,16 @@
     color: var(--pimary-accent-color);
     margin-top: 16px;
     margin-bottom: 15px;
+    @include tablet {
+        @include font(48px, 400, 1.15, 0.04em);
+    }
 }
 
 .advantages-list__text {
     font-family: var(--main-font);
     @include font(12px, 700, 1.67, null);
     color: var(--primary-text-color);
+    @include tablet {
+        @include font(14px, 700, 1.71, 0.04em);
+    }
 }
