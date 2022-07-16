@@ -1,6 +1,9 @@
 .advantages {
     background-color: var(--secondary-bg-color);
     padding-top: 40px;
+    @include tablet {
+        padding-top: 60px;
+    }
 }
 
 .advantages-list {
@@ -9,33 +12,17 @@
     }
 }
 
+.advantages-list__item {
+    width: 190px;
+}
+
 .advantages-list__item:not(:last-child) {
     margin-bottom: 32px;
     @include tablet {
-        margin-right: 18px;
+        margin-bottom: 0px;
     }
 }
 
-.advantages-list__item--first {
-    width: 190px;
-    @include tablet {
-        width: 180px;
-    }
-}
-
-.advantages-list__item--second {
-    width: 190px;
-    @include tablet {
-        width: 180px;
-    }
-} 
-
-.advantages-list__item--third {
-    width: 190px;
-    @include tablet {
-        width: 180px;
-    }
-}
 
 .advantages-list__item--first::before {
     display: block;
