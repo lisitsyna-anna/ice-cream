@@ -3,25 +3,46 @@
   padding-top: 8px;
   display: flex;
   outline: transparent;
+  @include tablet {
+    padding-top: 32px;
+    outline: transparent;
+  }
+  @include desktop {
+    padding-top: 37px;
+    outline: transparent;
+  }
 
   &__logo {
     display: flex;
-    margin-right: 100px;
+    margin-right: auto;
+
+    @include desktop {
+      margin-right: 125px;
+    }
   }
   &__btn {
+    background-color: var(--primary-bg-color);
     display: none;
-    padding: 13px 49px;
+    padding: 13px 37px;
     color: var(--pimary-accent-color);
     margin-left: 32px;
-
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--typical-time-function);
     @include tablet {
       display: flex;
     }
+    @include desktop {
+      margin-left: 0;
+    }
   }
+
   &__btn:hover,
   &__btn:focus {
     background-color: var(--pimary-accent-color);
     color: var(--tertiary-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
 nav {
@@ -34,8 +55,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include mobile-responsive {
-  }
 }
 .header-list {
   display: none;
@@ -53,7 +72,12 @@ nav {
   }
   &__link {
     color: var(--tertiary-text-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
     @include font(16px, 700, 1.31, null);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--typical-time-function);
   }
   &__link.current {
     color: var(--pimary-accent-color);
@@ -93,16 +117,18 @@ nav {
   width: 100vw;
   height: 100vh;
   background-color: var(--mobile-menu-bg-color);
+  overflow-y: auto;
 
   transform: translateX(0);
   transition: transform 300ms var(--typical-time-function),
     visibility 300ms var(--typical-time-function),
     opacity 300ms var(--typical-time-function);
-
-  overflow-y: auto;
   @include tablet {
     width: 40%;
     left: 60%;
+  }
+  @include desktop {
+    display: none;
   }
   &__container {
     width: 100%;
@@ -111,16 +137,22 @@ nav {
     height: 100%;
   }
   &__btn {
+    background-color: var(--primary-bg-color);
     margin-bottom: 19px;
     margin-left: auto;
     margin-right: auto;
-    padding: 13px 49px;
+    padding: 13px 48px;
     color: var(--pimary-accent-color);
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--typical-time-function);
   }
   &__btn:hover,
   &__btn:focus {
     background-color: var(--pimary-accent-color);
     color: var(--tertiary-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 
   @include desktop {
@@ -161,6 +193,9 @@ nav {
   &__link {
     color: var(--tertiary-text-color);
     @include font(14px, 700, 1.29, null);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--typical-time-function);
   }
   &__link.current {
     color: var(--pimary-accent-color);
