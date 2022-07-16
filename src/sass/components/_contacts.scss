@@ -1,6 +1,6 @@
 .contacts {
   padding-top: 60px;
-  background-image: linear-gradient(to bottom, #ffffff 13%, #fff5f6);
+  background-image: linear-gradient(to bottom, #ffffff 26%, #fff5f6 26%);
 
   @include tablet {
     padding-top: 120px;
@@ -29,6 +29,11 @@
   @include tablet {
     min-height: 528px;
   }
+
+  @include desktop {
+    min-height: 538px;
+    padding: 40px 40px;
+  }
 }
 
 .contacts__category {
@@ -53,6 +58,11 @@
     width: 73px;
     min-height: 28px;
     font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    width: 75px;
   }
 }
 
@@ -71,10 +81,14 @@
   line-height: 186%;
   letter-spacing: 0.04em;
   color: var(--primary-text-color);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 
   @include tablet {
     font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
   }
 }
 
@@ -89,15 +103,45 @@
   @include tablet {
     font-size: 14px;
     line-height: 1.6;
+    padding-bottom: 33px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.8;
   }
 }
 
 .contacts__time-list {
   margin-top: 24px;
+
+  @include tablet {
+    margin-top: 33px;
+  }
 }
 .contacts__time-item {
   &:nth-child(2n + 1) {
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.contacts__day-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  letter-spacing: 0.04em;
+  color: var(--primary-text-color);
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
   }
 }
 
@@ -110,15 +154,28 @@
   @include tablet {
     font-size: 14px;
   }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.9;
+  }
 }
 
 .contacts__time-text--border {
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 24px;
+
+  @include tablet {
+    padding-bottom: 33px;
+  }
 }
 
 .contacts__communications-list {
   margin-top: 24px;
+
+  @include tablet {
+    margin-top: 33px;
+  }
 }
 
 .contacts__communications-link {
@@ -139,6 +196,10 @@
     font-size: 14px;
     line-height: 1.8;
   }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .contacts__btn-list {
@@ -151,6 +212,10 @@
   @include tablet {
     margin-top: 60px;
     gap: 15px;
+  }
+
+  @include desktop {
+    gap: 12px;
   }
 }
 .contacts__btn-item {
