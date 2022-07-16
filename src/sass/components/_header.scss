@@ -15,8 +15,9 @@
   &__logo {
     display: flex;
     margin-right: auto;
+
     @include desktop {
-      margin-right: 128px;
+      margin-right: 125px;
     }
   }
   &__btn {
@@ -54,8 +55,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include mobile-responsive {
-  }
 }
 .header-list {
   display: none;
@@ -74,7 +73,8 @@ nav {
   }
   &__link {
     color: var(--tertiary-text-color);
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     @include font(16px, 700, 1.31, null);
     transition-property: color;
     transition-duration: 250ms;
@@ -115,19 +115,17 @@ nav {
   top: 0;
   left: 0;
   z-index: 999;
-  transition-timing-function: var(--typical-time-function);
+
   width: 100vw;
   height: 100vh;
   background-color: var(--mobile-menu-bg-color);
+  overflow-y: auto;
 
   transform: translateX(0);
   transition: transform 300ms var(--typical-time-function),
     visibility 300ms var(--typical-time-function),
     opacity 300ms var(--typical-time-function);
-
-  overflow-y: auto;
   @include tablet {
-    position: absolute;
     width: 40%;
     left: 60%;
   }
@@ -145,7 +143,7 @@ nav {
     margin-bottom: 19px;
     margin-left: auto;
     margin-right: auto;
-    padding: 13px 49px;
+    padding: 13px 48px;
     color: var(--pimary-accent-color);
     transition-property: background-color, color, box-shadow;
     transition-duration: 250ms;

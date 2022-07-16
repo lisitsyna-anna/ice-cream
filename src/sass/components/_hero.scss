@@ -1,19 +1,18 @@
 .hero {
-  width: 100vw;
+  height: 444px;
   background-color: var(--hero-bg-color);
-
-  @media screen and (max-width: 767px) {
-    height: 422px;
-  }
+  padding-top: 22px;
+  overflow: hidden;
   @include tablet {
-    padding-bottom: 14px;
+    height: 100%;
+    overflow: visible;
+    padding-top: 20px;
+  }
+  @include desktop {
+    padding-top: 60px;
   }
   & .container {
     position: relative;
-    height: 100%;
-    @media screen and (max-width: 767px) {
-      overflow: hidden;
-    }
   }
 }
 
@@ -25,7 +24,7 @@
   margin-left: 16px;
   @include tablet {
     position: absolute;
-    top: -25px;
+    top: -50px;
     left: 249px;
     width: 335px;
     height: 333px;
@@ -33,7 +32,6 @@
 }
 .hero__wrap {
   display: flex;
-  padding-top: 20px;
 }
 .hero__wrap--spacebetween {
   justify-content: space-between;
@@ -41,7 +39,7 @@
 .hero__wrap--absolute {
   @media screen and (max-width: 767px) {
     position: absolute;
-    top: 136px;
+    top: 90px;
     left: 20px;
     z-index: 1;
   }
@@ -54,31 +52,16 @@
     font-size: 26px;
     color: var(--tertiary-text-color);
     @include tablet {
-      font-family: 'Titan One';
-      font-style: normal;
-      font-weight: 400;
       font-size: 22px;
-      line-height: 25px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #ffffff;
+      line-height: 1.13;
     }
   }
   &--red {
     font-size: 48px;
     line-height: 0.96;
     @include tablet {
-      font-family: 'Titan One';
-      font-style: normal;
-      font-weight: 400;
       font-size: 34px;
-      line-height: 90.5%;
-      /* or 31px */
-
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-
-      color: #d41443;
+      line-height: 0.91;
     }
   }
 }
@@ -98,6 +81,8 @@
   min-width: 62.4px;
   color: var(--tertiary-text-color);
   background-color: var(--pimary-accent-color);
+  transition: color 250ms var(--typical-time-function),
+    background-color 250ms var(--typical-time-function);
   &:hover,
   &:focus {
     color: var(--pimary-accent-color);
@@ -109,6 +94,8 @@
   min-width: 82.8px;
   color: var(--pimary-accent-color);
   background-color: var(--primary-bg-color);
+  transition: color 250ms var(--typical-time-function),
+    background-color 250ms var(--typical-time-function);
   &:hover,
   &:focus {
     color: var(--primary-bg-color);
@@ -133,19 +120,16 @@
   &--icecream {
     position: absolute;
     display: inline;
-    top: 12px;
-    left: 97px;
+
+    @media screen and (max-width: 767px) {
+      top: 12px;
+      left: 97px;
+    }
     @include tablet {
       width: 143px;
-      margin: 0 auto;
       bottom: 0;
       left: 42%;
     }
-  }
-  &--girl {
-    position: absolute;
-    bottom: 0;
-    right: 0;
   }
 }
 .hero-list {
@@ -156,7 +140,7 @@
 }
 .hero-list__item {
   position: relative;
-
+  z-index: 1;
   font-size: 8px;
   line-height: 1.25;
   text-align: right;
@@ -164,16 +148,14 @@
   padding-right: 10px;
   color: var(--tertiary-text-color);
   background-color: transparent;
-  z-index: 1;
 }
 .hero-list__item:nth-child(1) {
   width: 43px;
   height: 44px;
 }
 .hero-list__item:nth-child(2) {
-  width: 51px;
+  width: 61px;
   height: 47px;
-
   padding-left: 8px;
 }
 .hero-list__item::after {
@@ -196,10 +178,10 @@
 }
 
 .hero__img--milk {
-  bottom: 16px;
 }
 .hero__wrap--flex {
   align-items: center;
+  padding-bottom: 16px;
 }
 .hero__wrap--bottom {
   display: block;
@@ -228,6 +210,7 @@
   fill: var(--pimary-accent-color);
 }
 .hero__img--girl {
-  bottom: -14px;
-  right: 32px;
+  position: absolute;
+  bottom: 0;
+  right: 28px;
 }
