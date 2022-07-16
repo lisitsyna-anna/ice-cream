@@ -29,6 +29,12 @@
     width: 335px;
     height: 333px;
   }
+  @include desktop {
+    position: absolute;
+    width: 534px;
+    height: 534px;
+    transform: translateX(45%) translateY(-8%);
+  }
 }
 .hero__wrap {
   display: flex;
@@ -52,8 +58,14 @@
     font-size: 26px;
     color: var(--tertiary-text-color);
     @include tablet {
+      max-width: 162px;
       font-size: 22px;
       line-height: 1.13;
+    }
+    @include desktop {
+      max-width: 277px;
+      font-size: 38px;
+      line-height: 1.16;
     }
   }
   &--red {
@@ -62,6 +74,10 @@
     @include tablet {
       font-size: 34px;
       line-height: 0.91;
+    }
+    @include desktop {
+      font-size: 58px;
+      line-height: 0.9;
     }
   }
 }
@@ -72,17 +88,23 @@
   height: 24px;
   border: none;
   border-radius: 20px;
+  @include desktop {
+    height: 40px;
+  }
   & + & {
     margin-left: 8px;
   }
 }
 
 .hero-info__item--red {
-  min-width: 62.4px;
+  min-width: 63px;
   color: var(--tertiary-text-color);
   background-color: var(--pimary-accent-color);
   transition: color 250ms var(--typical-time-function),
     background-color 250ms var(--typical-time-function);
+  @include desktop {
+    min-width: 107px;
+  }
   &:hover,
   &:focus {
     color: var(--pimary-accent-color);
@@ -91,11 +113,14 @@
 }
 
 .hero-info__item--white {
-  min-width: 82.8px;
+  min-width: 83px;
   color: var(--pimary-accent-color);
   background-color: var(--primary-bg-color);
   transition: color 250ms var(--typical-time-function),
     background-color 250ms var(--typical-time-function);
+  @include desktop {
+    min-width: 137px;
+  }
   &:hover,
   &:focus {
     color: var(--primary-bg-color);
@@ -111,6 +136,10 @@
   font-family: inherit;
   @include font(8px, 400, 1.25, null);
   color: inherit;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }
 .hero__img {
   display: none;
@@ -130,6 +159,11 @@
       bottom: 0;
       left: 42%;
     }
+    @include desktop {
+      width: 236px;
+      bottom: 0;
+      left: 52%;
+    }
   }
 }
 .hero-list {
@@ -148,15 +182,27 @@
   padding-right: 10px;
   color: var(--tertiary-text-color);
   background-color: transparent;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }
 .hero-list__item:nth-child(1) {
   width: 43px;
   height: 44px;
+  @include desktop {
+    width: 72px;
+    height: 77px;
+  }
 }
 .hero-list__item:nth-child(2) {
   width: 61px;
   height: 47px;
   padding-left: 8px;
+  @include desktop {
+    width: 92px;
+    height: 76px;
+  }
 }
 .hero-list__item::after {
   content: ' ';
@@ -165,9 +211,13 @@
   right: 0;
   z-index: -1;
   width: 16px;
-  height: 17px;
+  height: 16px;
   border-radius: 50%;
   background-color: var(--primary-bg-color);
+  @include desktop {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .hero-list__span {
@@ -175,13 +225,25 @@
   @include font(28px, null, 1.14, 0.04em);
   text-transform: uppercase;
   color: #d41443;
+  @include desktop {
+    font-size: 46px;
+    line-height: 53px;
+  }
 }
 
 .hero__img--milk {
+  @include desktop {
+    width: 213px;
+  }
 }
 .hero__wrap--flex {
   align-items: center;
   padding-bottom: 16px;
+  margin-top: 20px;
+  @include desktop {
+    margin-top: 40px;
+    padding-bottom: 61px;
+  }
 }
 .hero__wrap--bottom {
   display: block;
@@ -195,22 +257,48 @@
     margin-bottom: 7px;
     color: var(--tertiary-text-color);
   }
+  @include desktop {
+    width: 200px;
+    font-size: 14px;
+    line-height: 1.43;
+  }
 }
 .hero__btn {
   display: none;
   @include tablet {
     display: block;
-    align-items: center;
+    width: 18px;
+    height: 18px;
+    padding: 0;
     border: none;
     border-radius: 50%;
     background-color: var(--primary-bg-color);
+    color: var(--pimary-accent-color);
+    transition: color 250ms var(--typical-time-function),
+      background-color 250ms var(--typical-time-function);
+  }
+  @include desktop {
+    width: 26px;
+    height: 26px;
   }
 }
+.hero__btn:hover,
+.hero__btn:focus {
+  background-color: var(--pimary-accent-color);
+  color: var(--primary-bg-color);
+}
 .hero__icon {
-  fill: var(--pimary-accent-color);
+  fill: currentColor;
 }
 .hero__img--girl {
   position: absolute;
   bottom: 0;
   right: 28px;
+  @include tablet {
+    width: 190px;
+  }
+  @include desktop {
+    width: 304px;
+    right: 16px;
+  }
 }
