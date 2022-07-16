@@ -1,129 +1,132 @@
 .advantages {
-    background-color: var(--secondary-bg-color);
-    padding-top: 40px;
-    @include tablet {
-        padding-top: 60px;
-        
-    }
-        @include desktop {
-            padding-top: 121px;
-        }
+  background-color: var(--secondary-bg-color);
+  padding-top: 40px;
+  @include tablet {
+    padding-top: 60px;
+  }
+  @include desktop {
+    padding-top: 121px;
+  }
 }
 
 .advantages-list {
-    @include tablet {
-        display: flex;
-    }
-    @include desktop {
-        justify-content: space-between;
-    }
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    justify-content: space-between;
+  }
+}
+
+.advantages-list__item {
+  width: 190px;
 }
 
 .advantages-list__item:not(:last-child) {
-    margin-bottom: 32px;
-    @include tablet {
-        margin-right: 18px;
-        margin-bottom: 0px;
-    }
-    @include desktop {
-        margin-right: 0px;
-    }
+  margin-bottom: 32px;
+  @include tablet {
+    margin-right: 18px;
+    margin-bottom: 0px;
+  }
+  @include desktop {
+    margin-right: 0px;
+  }
 }
 
 .advantages-list__item--first {
-    width: 190px;
-    @include tablet {
-        width: 180px;
-    }
-        @include desktop {
-            width: 280px;
-        }
+  width: 190px;
+  @include tablet {
+    width: 180px;
+  }
+  @include desktop {
+    width: 280px;
+  }
 }
 
 .advantages-list__item--second {
-    width: 190px;
-    @include tablet {
-        width: 180px;
-    }
-        @include desktop {
-            width: 280px;
-        }
-} 
+  width: 190px;
+  @include tablet {
+    width: 180px;
+  }
+  @include desktop {
+    width: 280px;
+  }
+}
 
 .advantages-list__item--third {
-    width: 190px;
-    @include tablet {
-        width: 180px;
-    }
-        @include desktop {
-            width: 280px;
-        }
+  width: 190px;
+  @include tablet {
+    width: 180px;
+  }
+  @include desktop {
+    width: 280px;
+  }
 }
 
 .advantages-list__item--first::before {
-    display: block;
-    content: '';
-    background-image: url(/src/images/advantages-icon1-1x.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 33px;
-    height: 50px;
-    @include retina {
-        background-image: url(/src/images/advantages-icon1-2x.png);
-    }
+  display: block;
+  content: '';
+  background-image: url(/src/images/advantages-icon1-1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 33px;
+  height: 50px;
+  @include retina {
+    background-image: url(/src/images/advantages-icon1-2x.png);
+  }
 }
 
 .advantages-list__item--second::before {
-    display: block;
-    content: '';
-    background-image: url(/src/images/advantages-icon2-1x.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    @include retina{
-        background-image: url(/src/images/advantages-icon2-2x.png);
-    }
+  display: block;
+  content: '';
+  background-image: url(/src/images/advantages-icon2-1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  @include retina {
+    background-image: url(/src/images/advantages-icon2-2x.png);
+  }
 }
 
 .advantages-list__item--third::before {
-    display: block;
-    content: '';
-    background-image: url(/src/images/advantages-icon3-1x.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 44px;
-    height: 50px;
-    @include retina{
-        background-image: url(/src/images/advantages-icon3-2x.png);
-    }
+  display: block;
+  content: '';
+  background-image: url(/src/images/advantages-icon3-1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 44px;
+  height: 50px;
+  @include retina {
+    background-image: url(/src/images/advantages-icon3-2x.png);
+  }
 }
 
 .advantages-list__number {
-    font-family: var(--accent-font);
-    @include font(36px, 400, 1.14, 0.04em);
-    text-transform: uppercase;
-    color: var(--pimary-accent-color);
-    margin-top: 16px;
-    margin-bottom: 15px;
-    @include tablet {
-        @include font(48px, 400, 1.15, 0.04em);
-        margin-top: 36px;
-    }
-    @include desktop {
-        @include font(58px, 400, 1.14, 0.04em);
-        margin-top: 40px;
-    }
+  font-family: var(--accent-font);
+  @include font(36px, 400, 1.14, 0.04em);
+  text-transform: uppercase;
+  color: var(--pimary-accent-color);
+  margin-top: 16px;
+  margin-bottom: 15px;
+  @include tablet {
+    @include font(48px, 400, 1.15, 0.04em);
+    margin-top: 36px;
+  }
+  @include desktop {
+    @include font(58px, 400, 1.14, 0.04em);
+    margin-top: 40px;
+  }
 }
 
 .advantages-list__text {
-    font-family: var(--main-font);
-    @include font(12px, 700, 1.67, null);
-    color: var(--primary-text-color);
-    @include tablet {
-        @include font(14px, 700, 1.71, 0.04em);
-    }
-        @include desktop {
-            @include font(16px, 700, 1.76, 0.02em)
-        }
+  font-family: var(--main-font);
+  @include font(12px, 700, 1.67, null);
+  color: var(--primary-text-color);
+  @include tablet {
+    @include font(14px, 700, 1.71, 0.04em);
+  }
+  @include desktop {
+    @include font(16px, 700, 1.76, 0.02em);
+  }
 }
