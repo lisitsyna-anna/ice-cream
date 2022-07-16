@@ -1,11 +1,20 @@
 .advantages {
     background-color: var(--secondary-bg-color);
     padding-top: 40px;
+    @include tablet {
+        padding-top: 60px;
+    }
+        @include desktop {
+            padding-top: 121px;
+        }
 }
 
 .advantages-list {
     @include tablet {
         display: flex;
+    }
+    @include desktop {
+        justify-content: space-between;
     }
 }
 
@@ -13,6 +22,10 @@
     margin-bottom: 32px;
     @include tablet {
         margin-right: 18px;
+        margin-bottom: 0px;
+    }
+    @include desktop {
+        margin-right: 0px;
     }
 }
 
@@ -21,6 +34,9 @@
     @include tablet {
         width: 180px;
     }
+        @include desktop {
+            width: 280px;
+        }
 }
 
 .advantages-list__item--second {
@@ -28,6 +44,9 @@
     @include tablet {
         width: 180px;
     }
+        @include desktop {
+            width: 280px;
+        }
 } 
 
 .advantages-list__item--third {
@@ -35,6 +54,9 @@
     @include tablet {
         width: 180px;
     }
+        @include desktop {
+            width: 280px;
+        }
 }
 
 .advantages-list__item--first::before {
@@ -85,6 +107,11 @@
     margin-bottom: 15px;
     @include tablet {
         @include font(48px, 400, 1.15, 0.04em);
+        margin-top: 36px;
+    }
+    @include desktop {
+        @include font(58px, 400, 1.14, 0.04em);
+        margin-top: 40px;
     }
 }
 
@@ -95,4 +122,7 @@
     @include tablet {
         @include font(14px, 700, 1.71, 0.04em);
     }
+        @include desktop {
+            @include font(16px, 700, 1.76, 0.02em)
+        }
 }
