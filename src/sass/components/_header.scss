@@ -61,6 +61,7 @@ nav {
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 
   @include desktop {
     display: flex;
