@@ -3,6 +3,7 @@
   background-color: var(--hero-bg-color);
   padding-top: 22px;
   overflow: hidden;
+  transform: translateY(-1px);
   @include tablet {
     height: 100%;
     overflow: visible;
