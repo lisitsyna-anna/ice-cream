@@ -1,3 +1,15 @@
+.products .container {
+  @include tablet {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @include desktop {
+    width: 1200px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 .products {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -159,6 +171,8 @@
     }
 
     width: 224px;
+    height: 224px;
+    transform: translate(-50%, -61.6%);
   }
   @include desktop {
     background-image: url(/src/images/product-icecream-desktop-1x.png);
@@ -203,6 +217,8 @@
     }
 
     width: 224px;
+    height: 224px;
+    transform: translate(-50%, -61.6%);
   }
   @include desktop {
     background-image: url(/src/images/product-icecoffee-desktop-1x.png);
@@ -246,6 +262,8 @@
     }
 
     width: 224px;
+    height: 224px;
+    transform: translate(-50%, -61.6%);
   }
   @include desktop {
     background-image: url(/src/images/product-milkshakes-desktop-1x.png);
