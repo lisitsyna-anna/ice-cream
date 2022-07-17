@@ -1,4 +1,4 @@
-<div class="modal-buy is-hidden modal-buy">
+<div class="modal-buy is-hidden no-scroll">
   <div class="modal-buy-container">
     <button class="modal-buy-close">
       <svg class="icon-close" width="11" height="11">
@@ -7,41 +7,65 @@
     </button>
     <p class="modal-buy-title">Buy now</p>
     <form>
-      <label for="user-name" class="modal-buy-label label">Name</label>
-      <input
-        type="text"
-        id="user-name"
-        name="user-name"
-        class="modal-buy-input"
-      />
-      <label for="user-tel" class="modal-buy-label label">Phone</label>
-      <input type="tel" id="user-tel" name="user-tel" class="modal-buy-input" />
-      <label for="user-email" class="modal-buy-label label">E-mail</label>
-      <input
-        type="email"
-        id="user-email"
-        name="user-email"
-        class="modal-buy-input"
-      />
-      <label for="Product" class="group-label label">Product</label>
-      <select name="product" id="product" class="select-modal">
-        <optgroup label="Ice Cream">
-          <option value="Chocolate">Chocolate</option>
-          <option value="Strawberry">Strawberry</option>
-          <option value="Banana">Banana</option>
-        </optgroup>
+      <div class="form-container">
+        <label for="user-name" class="modal-buy-label label">Name</label>
+        <input
+          type="text"
+          id="user-name"
+          name="user-name"
+          class="modal-buy-input"
+          required
+        />
+        <label for="user-tel" class="modal-buy-label label">Phone</label>
+        <input
+          type="tel"
+          id="user-tel"
+          name="user-tel"
+          class="modal-buy-input"
+          required
+        />
+        <label for="user-email" class="modal-buy-label label">E-mail</label>
+        <input
+          type="email"
+          id="user-email"
+          name="user-email"
+          class="modal-buy-input"
+          required
+        />
+      </div>
+      <div class="group-select">
+        <div class="group">
+          <label for="Ice Cream" class="group-label label">Ice Cream</label>
+          <select name="Ice Cream" id="Ice Cream" class="select-modal">
+            <option value="Chocolate">Chocolate</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Banana">Banana</option>
+          </select>
+        </div>
+        <div class="group">
+          <label for="Milkshakes" class="group-label label">Milkshakes</label>
+          <select name="Milkshakes" id="Milkshakes" class="select-modal">
+            <option value="Vanilla">Vanilla</option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="Strawberry">Strawberry</option>
+          </select>
+        </div>
+        <div class="group">
+          <label for="Ice Coffee" class="group-label label">Ice Coffee</label>
+          <select name="Ice Coffee" id="Ice Coffee" class="select-modal">
+            <option value="Ice Latte">Ice Latte</option>
+            <option value="Frappe">Frappe</option>
+            <option value="Bumblebee">Bumblebee</option>
+          </select>
+        </div>
+      </div>
 
-        <optgroup label="Milkshakes">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </optgroup>
-        <optgroup label="Ice Coffee">
-          <option value="Ice Latte">Ice Latte</option>
-          <option value="Frappe">Frappe</option>
-          <option value="Bumblebee">Bumblebee</option>
-        </optgroup>
-      </select>
+      <textarea
+        name="Comment"
+        id="Comment"
+        placeholder="Your comment on the order"
+        class="comment"
+      ></textarea>
       <button class="modal-btn">Send</button>
     </form>
   </div>
