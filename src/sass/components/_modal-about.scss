@@ -1,0 +1,94 @@
+.about-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms var(--typical-time-function),
+    visibility 250ms var(--typical-time-function);
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.about-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--secondary-bg-color);
+  width: calc(100% - 20px);
+  height: 550px;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 4px;
+  padding: 40px;
+  transition: transform 250ms var(--typical-time-function);
+  .about-backdrop.is-hidden & {
+    transform: translate(-50%, -50%);
+  }
+  @include mobile {
+    width: 450px;
+  }
+  @include tablet {
+    width: 528px;
+    height: 581px;
+  }
+}
+.about-modal__close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  top: 8px;
+  right: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-accent-color);
+  color: var(--primary-bg-color);
+  transition: border 250ms var(--typical-time-function),
+    background-color 250ms var(--typical-time-function);
+  &:hover,
+  &:focus {
+    background-color: var(--primary-bg-color);
+    border: 1px solid transparent;
+  }
+  &:hover .icon-close,
+  &:focus .icon-close {
+    fill: var(--secondary-accent-color);
+  }
+}
+.icon-close {
+  fill: currentColor;
+  transition: fill 250ms var(--typical-time-function);
+}
+.about-modal__title {
+  color: var(--pimary-accent-color);
+  font-family: var(--accent-font);
+  @include font(16px, 500, 1.5, null);
+  text-align: center;
+  margin-bottom: 10px;
+  @include tablet {
+    @include font(30px, 500, 1.5, null);
+    margin-bottom: 20px;
+  }
+}
+.about-modal__content {
+  color: var(--secondary-accent-color);
+  font-family: var(--accent-font);
+  @include font(12px, 500, 1.5, null);
+  text-align: center;
+  margin-bottom: 20px;
+  @include tablet {
+    @include font(16px, 500, 1.5, null);
+    margin-bottom: 30px;
+  }
+}
+.about-modal__video {
+  width: 100%;
+}
