@@ -113,10 +113,11 @@ nav {
 .mob-menu {
   position: fixed;
   top: 0;
-  left: 0;
+  // left: 0;
+  right: 0;
   z-index: 999;
-
-  width: 100vw;
+  padding-top: 60px;
+  width: 78%;
   height: 100vh;
   background-color: var(--mobile-menu-bg-color);
   overflow-y: auto;
@@ -132,12 +133,11 @@ nav {
   @include desktop {
     display: none;
   }
-  &__container {
-    width: 100%;
-    padding-top: 60px;
-    position: relative;
-    height: 100%;
-  }
+  // &__container {
+  //   width: 100%;
+  //   position: relative;
+  //   height: 100%;
+  // }
   &__btn {
     background-color: var(--primary-bg-color);
     margin-bottom: 19px;
@@ -195,6 +195,7 @@ nav {
   &__link {
     color: var(--tertiary-text-color);
     @include font(14px, 700, 1.29, null);
+    padding-left: 20px;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: var(--typical-time-function);
@@ -215,6 +216,9 @@ nav {
   border: transparent;
   background-color: transparent;
   cursor: pointer;
+  @include tablet {
+    right: 32px;
+  }
 }
 
 .menu-close {
