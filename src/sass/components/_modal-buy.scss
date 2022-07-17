@@ -36,6 +36,9 @@ body.modal-open .mob-menu {
   padding-bottom: 40px;
   padding-left: 41px;
   padding-right: 39px;
+  @include mobile {
+    width: 450px;
+  }
   @include tablet {
     width: 450px;
     height: 620px;
@@ -58,7 +61,7 @@ body.modal-open .mob-menu {
   align-items: center;
   background-color: var(--mobile-menu-bg-color);
   color: var(--primary-bg-color);
-  transition-property: border, background-color, fill;
+  transition-property: border, background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--typical-time-function);
 }
