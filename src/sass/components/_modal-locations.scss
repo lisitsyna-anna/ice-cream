@@ -27,7 +27,7 @@
     padding: 35px 15px;
 
     @include mobile {
-       width: 440px;
+       width: 450px;
        height: 600px;
     }
     
@@ -81,6 +81,7 @@
     }
 }
 .loc-modal__close-icon {
+    z-index: 2;
     fill: currentColor;
     transition-property: fill;
     transition-duration: 250ms;
