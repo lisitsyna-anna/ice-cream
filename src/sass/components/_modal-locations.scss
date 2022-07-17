@@ -101,6 +101,11 @@
         justify-content: space-around;
     }
 }
+.loc-modal__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .loc-modal__title {
     color: var(--pimary-accent-color);
     @include font(15px, 400, 1.16, null);
@@ -122,6 +127,7 @@
 .loc-modal__map-wrap {
     border: 6px groove var(--secondary-accent-color);
     display: inline-block;
+    max-width: 315px;
 }
 .loc-modal__map {
     width: 200px;
