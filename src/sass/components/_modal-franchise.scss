@@ -1,0 +1,206 @@
+.franchise-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  z-index: 1;
+  overflow: scroll;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.franchise-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 97vw;
+  height: 98vh;
+  padding: 40px 15px;
+
+  background-color: var(--secondary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .franchise-backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  @include tablet {
+    max-width: 768px;
+    max-height: 750px;
+    padding: 50px 30px;
+  }
+
+  @include desktop {
+    max-width: 850px;
+    max-height: 900px;
+  }
+}
+
+.franchise-modal__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--mobile-menu-bg-color);
+  color: var(--primary-bg-color);
+
+  transition-property: border, background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--typical-time-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-bg-color);
+    border: 1px solid transparent;
+    fill: var(--mobile-menu-bg-color);
+  }
+}
+.franchise-modal__close-icon {
+  fill: currentColor;
+
+  .franchise-modal__close-btn:hover &,
+  .franchise-modal__close-btn:focus & {
+    fill: var(--mobile-menu-bg-color);
+  }
+}
+
+.franchise-modal__title {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--pimary-accent-color);
+  font-weight: 700;
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include desktop {
+    font-size: 22px;
+  }
+}
+
+.modal-field {
+  margin-top: 10px;
+
+  @include tablet {
+    max-width: 685px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  @include desktop {
+    margin-top: 40px;
+  }
+}
+
+.modal-field__text-label {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  color: var(--secondary-accent-color);
+
+  @include desktop {
+    font-size: 18px;
+  }
+}
+
+.modal-field__input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--secondary-accent-color);
+  border-radius: 4px;
+  padding-left: 10px;
+  &:focus {
+    outline: none;
+    border-color: var(--mobile-menu-bg-color);
+  }
+
+  &::placeholder {
+    color: var(--secondary-text-color);
+  }
+
+  @include desktop {
+    height: 55px;
+    margin-top: 4px;
+  }
+}
+
+.modal-field__textarea {
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid var(--secondary-accent-color);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::placeholder {
+    color: var(--secondary-text-color);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--mobile-menu-bg-color);
+  }
+
+  @include desktop {
+    margin-top: 4px;
+  }
+}
+
+.modal-field__button {
+  @include font(16px, 700, 1.88, 0.06em);
+  color: var(--primary-bg-color);
+  display: block;
+  background-color: var(--mobile-menu-bg-color);
+  border-radius: 22px;
+  padding: 10px 55px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  border: transparent;
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--typical-time-function);
+  &:hover,
+  &:focus {
+    color: var(--mobile-menu-bg-color);
+    background-color: var(--primary-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    outline: transparent;
+  }
+
+  @include tablet {
+    margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-top: 50px;
+  }
+}
