@@ -46,13 +46,14 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  width: 80px;
+  width: max-content;
   min-height: 16px;
+  padding: 0 25px;
   margin-bottom: 20px;
 
   font-weight: 500;
   font-size: 12px;
-  line-height: 186%;
+  line-height: 1.86%;
 
   letter-spacing: 0.04em;
   color: var(--tertiary-text-color);
@@ -60,24 +61,15 @@
   border-radius: 4px;
 
   @include tablet {
-    width: 73px;
     min-height: 28px;
     font-size: 16px;
     margin-bottom: 32px;
-  }
-
-  @include desktop {
-    width: 75px;
+    padding: 0 16px;
   }
 }
 
 .contacts__category--green {
   background-color: var(--card3-bg-color);
-  width: 130px;
-
-  @include tablet {
-    width: 138px;
-  }
 }
 
 .contacts__text {
