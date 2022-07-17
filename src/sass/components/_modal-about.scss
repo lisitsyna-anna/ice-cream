@@ -8,11 +8,6 @@
   opacity: 1;
   transition: opacity 250ms var(--typical-time-function),
     visibility 250ms var(--typical-time-function);
-  &.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
 }
 
 .about-modal {
