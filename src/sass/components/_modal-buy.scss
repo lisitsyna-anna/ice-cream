@@ -23,8 +23,8 @@ body.modal-open .mob-menu {
 .modal-buy-container {
   position: absolute;
   background-color: var(--secondary-bg-color);
-  width: calc(100% - 30px);
-  height: 550px;
+  width: calc(100% - 20px);
+  height: 609px;
   top: 50%;
   left: 50%;
   border-radius: 4px;
@@ -134,16 +134,16 @@ body.modal-open .mob-menu {
 
 .group-select {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     justify-content: center;
   }
   @include desktop {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 .group {
@@ -189,7 +189,15 @@ body.modal-open .mob-menu {
   background-color: var(--secondary-bg-color);
   color: var(--mobile-menu-bg-color);
   @include tablet {
-    margin-bottom: 25px;
+    // margin-bottom: 25px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+.select-number {
+  @include tablet {
+    margin-bottom: 10px;
   }
   @include desktop {
     margin-bottom: 0;
