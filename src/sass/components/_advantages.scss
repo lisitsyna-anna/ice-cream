@@ -112,6 +112,7 @@
   @include tablet {
     @include font(48px, 400, 1.15, 0.04em);
     margin-top: 36px;
+    text-transform: lowercase;
   }
   @include desktop {
     @include font(58px, 400, 1.14, 0.04em);
