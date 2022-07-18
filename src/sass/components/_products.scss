@@ -303,8 +303,10 @@
   text-indent: 30px;
   text-align: justify;
   background-color: var(--secondary-bg-color);
-  // transform: scaleX(0);
-  transition: transform 250ms var(--typical-time-function);
+  transform: scaleX(1);
+  transition: transform 250ms var(--typical-time-function),
+    opacity 250ms var(--typical-time-function);
+  opacity: 1;
 
   @include tablet {
     padding-top: 100px;
@@ -321,6 +323,13 @@
     padding-right: 50px;
     @include font(16px, 700, 1.76, 0.04em);
   }
+}
+
+.products__overlay-first.is-hidden,
+.products__overlay-second.is-hidden,
+.products__overlay-third.is-hidden {
+  transform: scale(0);
+  opacity: 0;
 }
 
 // .products-description-btn-first:active ~ .products__overlay-first,
