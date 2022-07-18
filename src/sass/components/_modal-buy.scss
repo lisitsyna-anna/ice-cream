@@ -245,7 +245,8 @@ body.modal-open {
 .modal-btn {
   @include font(15px, 600, 1.88, 0.06em);
   color: var(--primary-bg-color);
-  display: block;
+  display: flex;
+  align-items: center;
   background-color: var(--mobile-menu-bg-color);
   border-radius: 22px;
   padding-top: 8px;
@@ -284,7 +285,7 @@ body.modal-open {
 }
 .modal-btn-icon {
   fill: currentColor;
-  margin-left: 5px;
+  margin-left: 10px;
   @include tablet {
     width: 17px;
     height: 17px;
