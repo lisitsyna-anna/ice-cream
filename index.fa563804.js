@@ -1,2 +1,0 @@
-!function(){var e={openMenuBtn:document.querySelector(".products-description-btn-second"),closeMenuBtn:document.querySelector(".products-description-btn-second"),menu:document.querySelector(".products__overlay-second"),body:document.querySelector("body")};function n(){e.menu.classList.toggle("is-hidden")}e.openMenuBtn.addEventListener("click",n),e.closeMenuBtn.addEventListener("click",n)}();
-//# sourceMappingURL=index.fa563804.js.map
