@@ -280,3 +280,15 @@ body.modal-open {
     outline: transparent;
   }
 }
+.modal-btn-icon {
+  fill: currentColor;
+  margin-left: 5px;
+  @include tablet {
+    width: 17px;
+    height: 17px;
+  }
+  @include desktop {
+    width: 20px;
+    height: 20px;
+  }
+}
