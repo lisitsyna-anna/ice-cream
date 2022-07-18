@@ -81,6 +81,7 @@
     }
 }
 .loc-modal__close-icon {
+    position: relative;
     z-index: 2;
     fill: currentColor;
     transition-property: fill;
