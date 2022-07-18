@@ -62,7 +62,8 @@
 .icon-close {
   fill: currentColor;
   transition: fill 250ms var(--typical-time-function);
-  z-index: 1000;
+  position: absolute;
+  z-index: 1;
 }
 .about-modal__title {
   color: var(--pimary-accent-color);
