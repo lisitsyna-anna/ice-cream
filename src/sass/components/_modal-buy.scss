@@ -70,6 +70,7 @@ body.modal-open {
 }
 .icon-close {
   fill: currentColor;
+  position: relative;
   z-index: 1;
 }
 .modal-buy-close:hover,
@@ -86,7 +87,7 @@ body.modal-open {
   fill: var(--mobile-menu-bg-color);
 }
 .form-container {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   @include tablet {
     margin-bottom: 30px;
   }
@@ -131,7 +132,7 @@ body.modal-open {
   border: 1px solid var(--secondary-accent-color);
   border-radius: 4px;
   padding-left: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   @include tablet {
     height: 40px;
     margin-bottom: 12px;
@@ -221,12 +222,13 @@ body.modal-open {
   height: 40px;
   border: 1px solid var(--hero-bg-color);
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   resize: none;
   padding: 10px 16px;
   outline: none;
   @include tablet {
     height: 60px;
+    margin-bottom: 10px;
   }
   &::placeholder {
     @include font(10px, null, 1.14, 0.01em);
