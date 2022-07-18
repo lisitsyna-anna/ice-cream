@@ -3,11 +3,14 @@
   padding-top: 8px;
   display: flex;
   outline: transparent;
-  // position: fixed;
-  // left: 0;
-  // top: 0;
-  // width: 100%;
-  // z-index: 100;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
   @include tablet {
     padding-top: 32px;
     outline: transparent;
