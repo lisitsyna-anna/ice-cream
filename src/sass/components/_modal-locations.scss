@@ -151,6 +151,8 @@
   margin-top: 5px;
   @include font(10px, 400, 1, null);
   color: var(--secondary-text-color);
+
+  transition: color 250ms var(--typical-time-function);
   @include mobile {
     margin-top: 10px;
     @include font(12px, 400, 1, null);
@@ -165,5 +167,10 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--pimary-accent-color);
   }
 }
