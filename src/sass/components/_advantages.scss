@@ -35,6 +35,9 @@
 
 .advantages-list__item--first {
   width: 190px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 280px;
+  }
   @include tablet {
     width: 180px;
   }
@@ -45,6 +48,9 @@
 
 .advantages-list__item--second {
   width: 190px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 280px;
+  }
   @include tablet {
     width: 180px;
   }
@@ -55,6 +61,9 @@
 
 .advantages-list__item--third {
   width: 190px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 280px;
+  }
   @include tablet {
     width: 180px;
   }
