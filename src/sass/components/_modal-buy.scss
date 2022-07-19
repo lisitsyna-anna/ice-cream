@@ -28,7 +28,8 @@ body.modal-open {
   position: absolute;
   background-color: var(--secondary-bg-color);
   width: calc(100% - 20px);
-  height: 609px;
+  // height: 609px;
+  max-height: 90%;
   top: 50%;
   left: 50%;
   overflow-y: scroll;
@@ -46,7 +47,7 @@ body.modal-open {
   }
   @include tablet {
     width: 450px;
-    height: 90%;
+    max-height: 90%;
     // height: 609px;
   }
   @include desktop {
