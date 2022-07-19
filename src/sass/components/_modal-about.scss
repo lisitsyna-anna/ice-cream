@@ -5,6 +5,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 201;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms var(--typical-time-function),
@@ -18,7 +19,9 @@
   transform: translate(-50%, -50%) scale(1);
   background-color: var(--secondary-bg-color);
   width: calc(100% - 20px);
-  height: 550px;
+  height: auto;
+  overflow-y: scroll;
+
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
   border-radius: 4px;
@@ -29,9 +32,12 @@
   }
   @include mobile {
     width: 450px;
+    height: 80%;
   }
   @include tablet {
     width: 528px;
+  }
+  @include desktop {
     height: 581px;
   }
 }
@@ -72,22 +78,50 @@
   @include font(16px, 500, 1.5, null);
   text-align: center;
   margin-bottom: 10px;
+  @include mobile {
+    margin-bottom: 20px;
+  }
   @include tablet {
-    @include font(30px, 500, 1.5, null);
+    @include font(25px, 500, 1.5, null);
     margin-bottom: 20px;
   }
 }
-.about-modal__content {
+.about-modal__box {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-evenly;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: inherit;
+    gap: 30px;
+  }
+  @include tablet {
+    gap: 0;
+  }
+  @include desktop {
+    display: block;
+    height: auto;
+  }
+}
+.about-modal__text {
   color: var(--secondary-accent-color);
   font-family: var(--accent-font);
   @include font(12px, 500, 1.5, null);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   @include tablet {
     @include font(16px, 500, 1.5, null);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 .about-modal__video {
   width: 100%;
+  @include mobile {
+    height: inherit;
+  }
+  @include tablet {
+    height: 315px;
+  }
 }
