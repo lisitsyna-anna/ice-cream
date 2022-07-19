@@ -26,21 +26,23 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: calc(100% - 20px);
-  height: 609px;
+  max-height: 90%;
   padding: 35px 15px;
 
   @include mobile {
     width: 450px;
+    height: auto;
   }
 
   @include tablet {
     width: 700px;
-    height: 90%;
+    max-height: 95%;
   }
 
   @include desktop {
     width: 900px;
     height: 581px;
+    overflow-y: hidden;
   }
   background-color: var(--secondary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
