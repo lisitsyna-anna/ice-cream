@@ -20,21 +20,22 @@
 
 .loc-modal {
   position: absolute;
+  overflow-y: scroll;
   z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: calc(100% - 20px);
+  width: 97%;
   padding: 35px 15px;
 
   @include mobile {
     width: 450px;
-    height: 600px;
+    height: 97%;
   }
 
   @include tablet {
     width: 700px;
-    height: 581px;
+    height: 97%;
   }
 
   @include desktop {
@@ -135,7 +136,7 @@
   height: 100px;
   @include mobile {
     width: 300px;
-    height: 85px;
+    height: 85%;
   }
 
   @include tablet {
