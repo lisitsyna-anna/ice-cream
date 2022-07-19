@@ -1,6 +1,7 @@
 .loc-backdrop {
   position: fixed;
   overflow-y: scroll;
+  z-index: 201;
   top: 0;
   left: 0;
   width: 100%;
@@ -82,7 +83,7 @@
 }
 .loc-modal__close-icon {
     position: relative;
-    z-index: 2;
+    z-index: 202;
     fill: currentColor;
     transition-property: fill;
     transition-duration: 250ms;
