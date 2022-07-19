@@ -25,6 +25,8 @@
   width: calc(100% - 20px);
   padding: 40px;
   z-index: 1000;
+  overflow-y: scroll;
+  max-height: 90%;
 
   background-color: var(--secondary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -38,17 +40,19 @@
 
   @include mobile {
     width: 450px;
+    height: auto;
   }
 
   @include tablet {
     width: 450px;
-    height: 620px;
+    max-height: 95%;
     padding: 50px 40px;
   }
 
   @include desktop {
     width: 528px;
     height: 640px;
+    overflow-y: hidden;
   }
 }
 
