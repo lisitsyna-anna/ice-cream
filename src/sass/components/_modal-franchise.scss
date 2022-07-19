@@ -81,8 +81,8 @@
   }
 }
 .franchise-modal__close-icon {
-  position: relative;
-  z-index: 202;
+  position: absolute;
+  z-index: 210;
   fill: currentColor;
 
   .franchise-modal__close-btn:hover &,
