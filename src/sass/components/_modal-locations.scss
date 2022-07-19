@@ -25,17 +25,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 97%;
+  width: calc(100% - 20px);
+  height: 609px;
   padding: 35px 15px;
 
   @include mobile {
     width: 450px;
-    height: 97%;
   }
 
   @include tablet {
     width: 700px;
-    height: 97%;
+    height: 90%;
   }
 
   @include desktop {
