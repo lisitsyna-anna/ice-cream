@@ -4,6 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 201;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms var(--typical-time-function),
@@ -63,7 +64,7 @@
   fill: currentColor;
   transition: fill 250ms var(--typical-time-function);
   position: absolute;
-  z-index: 1;
+  z-index: 202;
 }
 .about-modal__title {
   color: var(--pimary-accent-color);
