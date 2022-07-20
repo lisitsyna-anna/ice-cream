@@ -1,50 +1,71 @@
-<div class="franchise-backdrop is-hidden" franchise-modal>
+<div class="franchise-backdrop is-hidden">
+  <div class="franchise-modal">
+    <button class="franchise-modal__close-btn">
+      <svg class="franchise-modal__close-icon" width="11" height="11">
+        <use href="./images/icons.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <p class="franchise-modal__title">Do you want to buy a franchise?</p>
+    <p class="franchise-modal__title">
+      Leave your phone number and we will call you back!
+    </p>
 
-    <div class="franchise-modal">
-        <button class="franchise-modal__close-btn" franchise-modal-close>
-            <svg class="franchise-modal__close-icon" width="11" height="11">
-                <use href="./images/icons.svg#icon-cross"></use>
-            </svg>
-        </button>
-        <p class="franchise-modal__title">Do you want to buy a franchise?</p>
-        <p class="franchise-modal__title">Leave your phone number and we will call you back!</p>
+    <form>
+      <div class="modal-field">
+        <label class="modal-field__label"
+          ><span class="modal-field__text-label">Full name *</span>
+          <input
+            class="modal-field__input"
+            name="user-name"
+            type="text"
+            required
+            placeholder=" "
+          />
+        </label>
+      </div>
 
-        <form>
+      <div class="modal-field">
+        <label class="modal-field__label"
+          ><span class="modal-field__text-label">E-mail *</span>
+          <input
+            class="modal-field__input"
+            name="user-email"
+            type="email"
+            required
+            placeholder=" "
+          />
+        </label>
+      </div>
 
-            <div class="modal-field">
-                <label class="modal-field__label"><span class="modal-field__text-label">Full name *</span>
-                    <div class="modal-field__wrap">
-                        <input class="modal-field__input" name="user-name" type="text" required placeholder=" ">
-                </label>
-            </div>
+      <div class="modal-field">
+        <label class="modal-field__label"
+          ><span class="modal-field__text-label">Phone number *</span>
+          <input
+            class="modal-field__input"
+            name="user-tel"
+            type="tel"
+            required
+            placeholder=" "
+          />
+        </label>
+      </div>
 
-            <div class="modal-field">
-                <label class="modal-field__label"><span class="modal-field__text-label">E-mail *</span>
-                    <div class="modal-field__wrap">
-                        <input class="modal-field__input" name="user-email" type="email" required placeholder=" ">
-                </label>
-            </div>
-
-
-            <div class="modal-field">
-                <label class="modal-field__label"><span class="modal-field__text-label">Phone number *</span>
-                    <div class="modal-field__wrap">
-                        <input class="modal-field__input" name="user-tel" type="tel" required placeholder=" ">
-                </label>
-            </div>
-
-            <div class="modal-field">
-                <label class="modal-field__label"><span class="modal-field__text-label">Question / comment</span>
-                    <textarea class="modal-field__textarea" name="user-text" placeholder=" "></textarea>
-                </label>
-            </div>
-            <button class="modal-field__button" type="submit" value="submit">Send
-                <svg class="modal-btn-icon" width="15" height="15">
-                    <use href="./images/icons.svg#icon-icecream2"></use>
-                </svg>
-            </button>
-        </form>
-
-
-    </div>
+      <div class="modal-field">
+        <label class="modal-field__label"
+          ><span class="modal-field__text-label">Question / comment</span>
+          <textarea
+            class="modal-field__textarea"
+            name="user-text"
+            placeholder=" "
+          ></textarea>
+        </label>
+      </div>
+      <button class="modal-field__button" type="submit" value="submit">
+        Send
+        <svg class="modal-btn-icon" width="15" height="15">
+          <use href="./images/icons.svg#icon-icecream2"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
 </div>
