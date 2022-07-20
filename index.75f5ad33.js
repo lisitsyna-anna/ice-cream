@@ -1,0 +1,2 @@
+!function(){var e={openModalBtn:document.querySelector(".contacts__button--white"),closeModalBtn:document.querySelector(".franchise-modal__close-btn"),modal:document.querySelector(".franchise-backdrop")};function o(){document.body.classList.toggle("no-scroll"),e.modal.classList.toggle("is-hidden")}e.openModalBtn.addEventListener("click",o),e.closeModalBtn.addEventListener("click",o)}();
+//# sourceMappingURL=index.75f5ad33.js.map
