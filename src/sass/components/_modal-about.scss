@@ -84,13 +84,11 @@
     margin-bottom: 20px;
   }
   @include tablet {
-    @include font(25px, 500, 1.5, null);
+    @include font(30px, 500, 1.5, null);
   }
 }
 .about-modal__box {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-evenly;
+  width: 100%;
   @include mobile {
     display: flex;
     flex-direction: column;
@@ -112,18 +110,82 @@
   @include font(12px, 500, 1.5, null);
   text-align: center;
   margin-bottom: 15px;
+  @include mobile {
+    margin-bottom: 0;
+  }
   @include tablet {
     @include font(16px, 500, 1.5, null);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
-.about-modal__video {
-  width: 100%;
-  height: auto;
-  @include mobile {
-    height: inherit;
-  }
+.about-modal__list {
+  margin-bottom: 40px;
   @include tablet {
-    height: 315px;
+    margin-bottom: 30px;
   }
+
+  & > .slick-next:before,
+  & > .slick-prev:before {
+    color: var(--pimary-accent-color);
+  }
+}
+.about-modal__item {
+  text-align: center;
+}
+
+.about-modal__subtitle {
+  color: var(--secondary-accent-color);
+  font-family: var(--accent-font);
+  @include font(30px, 500, 1.5, null);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.list__icon {
+  fill: var(--pimary-accent-color);
+  margin-bottom: 10px;
+}
+.about-modal__content {
+  @include font(12px, 500, 1.58, null);
+  color: var(--secondary-text-color);
+  width: 100%;
+  @include desktop {
+    @include font(16px, 500, 1.78, 0.04em);
+  }
+}
+.about-modal__link {
+  @include font(14px, 600, 1.88, 0.06em);
+  color: var(--primary-bg-color);
+  display: flex;
+  align-items: center;
+  background-color: var(--mobile-menu-bg-color);
+  border-radius: 22px;
+  width: 200px;
+  padding: 8px 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  transition: color 250ms var(--typical-time-function),
+    background-color 250ms var(--typical-time-function),
+    box-shadow 250ms var(--typical-time-function);
+  &:hover,
+  &:focus {
+    color: var(--mobile-menu-bg-color);
+    background-color: var(--primary-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  @include mobile {
+    @include font(15px, 600, 1.88, 0.06em);
+    width: 230px;
+    padding: 8px 45px;
+  }
+}
+.link__icon {
+  margin-left: 10px;
+  fill: currentColor;
 }
