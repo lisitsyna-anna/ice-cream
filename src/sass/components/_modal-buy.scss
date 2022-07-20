@@ -48,11 +48,11 @@ body.modal-open {
   @include tablet {
     width: 450px;
     max-height: 90%;
-    // height: 609px;
   }
   @include desktop {
     width: 528px;
     height: 620px;
+    overflow-y: hidden;
   }
 }
 .modal-buy-close {
