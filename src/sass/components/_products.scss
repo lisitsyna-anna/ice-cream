@@ -336,7 +336,7 @@
 .products__overlay-third {
   background-color: var(--secondary-bg-color);
 }
-.price {;
+.price {
   margin-bottom: 10px;
   @include desktop {
     @include font(40px, 400, 1.16, null);
@@ -369,7 +369,10 @@
     }
 }
 .products__compound-list {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
 }
 .products__compound-item {
   font-family: var(--main-font);
