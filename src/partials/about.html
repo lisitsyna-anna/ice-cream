@@ -8,27 +8,29 @@
       <picture>
         <source
           srcset="
-            ./images/about-cow-mobile-1x.png 1x,
-            ./images/about-cow-mobile-2x.png 2x
+            ./images/about-cow-desktop-1x.png  501w,
+            ./images/about-cow-desktop-2x.png 1002w
           "
-          media="(max-width: 767px)"
-          sizes="(max-width: 767px) 280px"
+          media="(min-width: 1200px)"
+          sizes="(min-width: 1200px) 501px"
         />
+
         <source
           srcset="
-            ./images/about-cow-tablet-1x.png 1x,
-            ./images/about-cow-tablet-2x.png 2x
+            ./images/about-cow-tablet-1x.png 336w,
+            ./images/about-cow-tablet-2x.png 672w
           "
           media="(min-width: 768px) and (max-width: 1199px)"
           sizes="(min-width: 768px) 336px"
         />
+
         <source
           srcset="
-            ./images/about-cow-desktop-1x.png 1x,
-            ./images/about-cow-desktop-2x.png 2x
+            ./images/about-cow-mobile-1x.png 280w,
+            ./images/about-cow-mobile-2x.png 560w
           "
-          media="(min-width: 1200px)"
-          sizes="(min-width: 1200px) 501px"
+          media="(max-width: 767px)"
+          sizes="(max-width: 767px) 280px"
         />
         <img
           loading="lazy"
@@ -54,7 +56,7 @@
         <button
           type="button"
           class="about__btn btn btn--white"
-          modal-about-open
+          data-modal-about-open
         >
           See more
           <svg class="about__btn-icon" width="10" height="20">
