@@ -89,7 +89,7 @@ The development of this project was led by:
 - [Maksym Hurin](https://github.com/Snook2022)
 - [Karina](https://github.com/uqiliteee)
 
-## ## Contact Information
+## Contact Information
 
 If you have any questions or feedback, please feel free to contact me:
 
