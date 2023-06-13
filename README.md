@@ -64,6 +64,16 @@ The footer section contains contact information and links to the company's
 social media profiles, enabling users to connect with the Ice Cream company on
 various platforms.
 
+## Features
+
+- Responsive Design: The website is designed to be fully responsive, adapting to
+  different screen sizes starting from 320px width. All images are optimized for
+  different resolutions and screen sizes, ensuring a consistent experience
+  across devices.
+- Semantic Markup: The HTML structure follows semantic conventions, improving
+  search engine optimization (SEO) and accessibility for users with
+  disabilities.
+
 ## Technologies Used
 
 The Ice Cream landing page was built using the following technologies:
